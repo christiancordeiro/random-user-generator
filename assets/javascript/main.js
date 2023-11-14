@@ -1,4 +1,6 @@
 const infos = document.getElementById("general-datas")
+let currentPhotoURL = ""
+let currentPeopleInfo = null
 
 function randomUser() {
   const url = "https://randomuser.me/api/"
@@ -7,6 +9,8 @@ function randomUser() {
     .then((data) => data.results[0])
     .then((people) => {
       console.log(people)
+      currentPhotoURL = people.picture.large
+      currentPeopleInfo = people
       loadInfos(people)
     })
     .catch((error) => console.error("Erro na requisição:", error))
@@ -17,7 +21,7 @@ randomUser()
 function loadInfos(people) {
   const newHtml = `
     <div class="photo">
-      <img src="${people.picture.large}" alt="" />
+      <img src="${currentPhotoURL}" alt="" />
     </div>
 
     <div class="data">
