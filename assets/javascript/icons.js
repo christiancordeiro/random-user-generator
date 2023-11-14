@@ -7,7 +7,7 @@ function mouseOverFunction(event) {
   if (classOfElement.includes("people")) {
     dataDiv.innerHTML = `
       <p>My name is:</p>
-      <h1>${people.name.first} ${people.name.last}</h1>
+      <h1>${currentPeopleInfo.name.first} ${currentPeopleInfo.name.last}</h1>
       `
   } else if (classOfElement.includes("email")) {
     dataDiv.innerHTML = `

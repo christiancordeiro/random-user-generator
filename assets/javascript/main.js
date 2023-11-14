@@ -19,6 +19,8 @@ function randomUser() {
 randomUser()
 
 function loadInfos(people) {
+  infos.innerHTML = ""
+
   const newHtml = `
     <div class="photo">
       <img src="${currentPhotoURL}" alt="" />
@@ -33,3 +35,8 @@ function loadInfos(people) {
 
   infos.innerHTML += newHtml
 }
+
+const button = document.getElementById("button")
+button.addEventListener("click", () => {
+  randomUser().then(loadInfos())
+})
