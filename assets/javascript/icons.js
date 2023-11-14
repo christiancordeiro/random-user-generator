@@ -1,8 +1,12 @@
 const listIcons = document.querySelectorAll(".icons ul li")
+let selectedElement = null
 
 function mouseOverFunction(event) {
   const classOfElement = event.target.className
   const dataDiv = infos.querySelector(".data")
+
+  const firstIcon = listIcons[0]
+  firstIcon.classList.remove("selecionado")
 
   if (classOfElement.includes("people")) {
     dataDiv.innerHTML = `
@@ -30,6 +34,14 @@ function mouseOverFunction(event) {
       <h1>${currentPeopleInfo.phone}</h1>
       `
   }
+
+  if (selectedElement) {
+    selectedElement.classList.remove("selecionado")
+  }
+
+  event.target.classList.add("selecionado")
+
+  selectedElement = event.target
 }
 
 listIcons.forEach((item) => {

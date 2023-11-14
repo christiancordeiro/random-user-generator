@@ -50,14 +50,18 @@
   gap: 20px;
 }
 
+.icons ul li {
+  cursor: pointer;
+}
+
 .icons ul li img {
   width: 35px;
   height: 35px;
-  cursor: pointer;
   filter: brightness(0.5);
 }
 
-.icons ul li img:hover {
+.icons ul li img:hover,
+.icons ul li.selecionado img {
   filter: brightness(1);
 }
 
