@@ -34,7 +34,7 @@
 
 .data h1 {
   font-weight: 500;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .icons {
@@ -74,6 +74,10 @@ button {
 @media screen and (min-width: 992px) {
   .container::before {
     top: 140px;
+  }
+
+  .data h1 {
+    font-size: 26px;
   }
 
   button {
