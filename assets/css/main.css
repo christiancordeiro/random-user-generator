@@ -28,21 +28,21 @@
 
 .data p {
   color: #b7b7b7;
-  font-size: 18px;
+  font-size: 16px;
   padding-bottom: 8px;
 }
 
 .data h1 {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
+  padding: 0px 20px;
 }
 
 .icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 21px;
+  padding: 18px 0px 26px;
 }
 
 .icons ul {
@@ -51,8 +51,8 @@
 }
 
 .icons ul li img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   cursor: pointer;
   filter: brightness(0.5);
 }
